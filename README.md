@@ -8,16 +8,6 @@ Easy String In CPP
 Inspired by a conversation on IRC with [Pr0Wolf29](https://github.com/Pr0Wolf29/)
 
 
-Things to check:
-
-* my regex.hpp
-* Pr0Wolf29 tools.cpp
-* Pr0Wolf29 libwolfstring.hpp
-* George xstring.h
-* http://www.cplusplus.com/reference/regex/
-* PCRE - with regex
-
-
 Possibility to choose between a class extending string or to use simple
 functions that take strings and return strings (or as reference) in a namespace (obviously)
 
