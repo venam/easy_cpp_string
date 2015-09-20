@@ -14,7 +14,6 @@ Things to check:
 * Pr0Wolf29 tools.cpp
 * Pr0Wolf29 libwolfstring.hpp
 * George xstring.h
-* Other languages such as Perl & Ruby
 * http://www.cplusplus.com/reference/regex/
 * PCRE - with regex
 
@@ -24,12 +23,13 @@ functions that take strings and return strings (or as reference) in a namespace 
 
 Set for camelcase
 
+
 #Functions To Implement:
 
 
 * `remove_html_comments`
-* `to_lower`
-* `to_upper`
+* `to_lower` == `uc`
+* `to_upper` == `lc`
 * `is_lower`
 * `is_upper`
 * `is_space`
@@ -38,12 +38,13 @@ Set for camelcase
 * `replace_all` //replace all occurence of a string inside another
 * `replace_all_recursive` //replace all occurence of a string inside another recursively, against injection
 * `int_to_string`
-* `string_to_int`
+* `string_to_int` == `to_i`
 * `float_to_string`
-* `string_to_float`
+* `string_to_float` == `to_f`
 * `string_to_long`
 * `long_to_string`
 * `strip` //need to check all the character that needs to be stripped \t \n \r
+* `chomp` //Removes line ending characters from a string or array of strings.
 * `rstrip` //(start from the end) need to check all the character that needs to be stripped \t \n \r
 * `rstrip`
 * `lstrip`
@@ -52,7 +53,6 @@ Set for camelcase
 * `split_lines` //split at \n
 * `starts_with`
 * `ends_with`
-* `match`
 * `is_number`
 * `remove_space` //remove all space and separator characters in a string
 * `remove_endline` //only remove endlines
@@ -70,6 +70,11 @@ Set for camelcase
 * `partition` //search for the first occurence of a separator and return 2 strings
 * `rpartition` //same but start searching from the right
 * `swap_case` //change upper by lower and lower by upper
-* `translate` //transliteration
+* `translate` == `tr` //transliteration
 * `zfill` //numeral padding with 0 on the left so it fits a width
-
+* `index` This function returns the position of the first occurance of the specified SEARCH string. If POSITION is specified, the occurance at or after the position is returned. The value -1 is returned if the SEARCH string is not found.
+* `rindex` STRING,SEARCH,POSITION from the end, no position = 0
+* `chop` Removes the last character from a string or array of strings.
+* `reverse`
+* `match` //pattern matching
+* `gsub` //pattern substitution
