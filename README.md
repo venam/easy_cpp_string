@@ -18,8 +18,8 @@ Set for camelcase
 
 
 * `remove_html_comments`
-* `to_lower` == `uc`
-* `to_upper` == `lc`
+* `to_lower` == `lc`
+* `to_upper` == `uc`
 * `is_lower`
 * `is_upper`
 * `is_space`
@@ -36,7 +36,6 @@ Set for camelcase
 * `strip` //need to check all the character that needs to be stripped \t \n \r
 * `chomp` //Removes line ending characters from a string or array of strings.
 * `rstrip` //(start from the end) need to check all the character that needs to be stripped \t \n \r
-* `rstrip`
 * `lstrip`
 * `is_hex` //check if a string is a valid hexadecimal
 * `split` //split by a string and returns a vector, the string is not included in what is returned
