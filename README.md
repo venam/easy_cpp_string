@@ -2,9 +2,6 @@ Easy String In CPP
 -------------------
 
 
-# WIP #
-
-
 Inspired by a conversation on IRC with [Pr0Wolf29](https://github.com/Pr0Wolf29/)
 
 
@@ -14,7 +11,7 @@ functions that take strings and return strings (or as reference) in a namespace 
 Set for camelcase
 
 
-#Functions To Implement:
+#Functions Implemented:
 
 
 * std::string char_to_string(char c) {
