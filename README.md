@@ -17,53 +17,91 @@ Set for camelcase
 #Functions To Implement:
 
 
-* `remove_html_comments`
-* `to_lower` == `lc`
-* `to_upper` == `uc`
-* `is_lower`
-* `is_upper`
-* `is_space`
-* `word_in` //check if another string is in the string
-* `replace` //replace one string inside another
-* `replace_all` //replace all occurence of a string inside another
-* `replace_all_recursive` //replace all occurence of a string inside another recursively, against injection
-* `int_to_string`
-* `string_to_int` == `to_i`
-* `float_to_string`
-* `string_to_float` == `to_f`
-* `string_to_long`
-* `long_to_string`
-* `strip` //need to check all the character that needs to be stripped \t \n \r
-* `chomp` //Removes line ending characters from a string or array of strings.
-* `rstrip` //(start from the end) need to check all the character that needs to be stripped \t \n \r
-* `lstrip`
-* `is_hex` //check if a string is a valid hexadecimal
-* `split` //split by a string and returns a vector, the string is not included in what is returned
-* `split_lines` //split at \n
-* `starts_with`
-* `ends_with`
-* `is_number`
-* `remove_space` //remove all space and separator characters in a string
-* `remove_endline` //only remove endlines
-* `remove_occurence` //remove all occurence of a string inside another
-* `remove_occurence_recursive` //remove all occurence of a string inside another recursively (safe)
-* `remove_special_chars` //keep only alphanumerics
-* `substring`
-* `capitalize` //only first characters of every word capitalized
-* `center` //Return S centered in a string of length width. Padding is done using the specified fill character (default is a space)
-* `count` (s,start,end)//return the number of non-overlapping occurence of a substring inside a string
-* `decode`
-* `encode`
-* `expand_tabs` //Return a copy of S where all tab characters are expanded using spaces.If tabsize is not given, a tab size of 8 characters is assumed.
-* `find`
-* `partition` //search for the first occurence of a separator and return 2 strings
-* `rpartition` //same but start searching from the right
-* `swap_case` //change upper by lower and lower by upper
-* `translate` == `tr` //transliteration
-* `zfill` //numeral padding with 0 on the left so it fits a width
-* `index` This function returns the position of the first occurance of the specified SEARCH string. If POSITION is specified, the occurance at or after the position is returned. The value -1 is returned if the SEARCH string is not found.
-* `rindex` STRING,SEARCH,POSITION from the end, no position = 0
-* `chop` Removes the last character from a string or array of strings.
-* `reverse`
-* `match` //pattern matching
-* `gsub` //pattern substitution
+* std::string char_to_string(char c) {
+* bool is_space(std::string s) {
+* std::string to_lower(std::string s) {
+* std::string lc(std::string s) { return to_lower(s); }
+* std::string to_upper(std::string s) {
+* std::string uc(std::string s) { return to_upper(s); }
+* bool is_lower(std::string s) {
+* bool is_upper(std::string s) {
+* bool is_word_in(std::string sentence, std::string word) {
+* std::string remove_html_comments(std::string html_response) {
+* std::string replace(std::string s, std::string from, std::string to) {
+* std::string replace_all(std::string s, std::string from, std::string to) {
+* std::string replace_all_recursive(std::string s, std::string from, std::string to) {
+* bool starts_with(std::string s, std::string start) {
+* bool ends_with(std::string s, std::string end) {
+* std::string chop(std::string s) {
+* std::string rstrip(std::string s) {
+* std::string chomp(std::string s){
+* std::string lstrip(std::string s) {
+* std::string strip(std::string s) {
+* bool is_hex(std::string s) {
+* std::vector<std::string> split(std::string s, std::string separator) {
+* std::vector<std::string> split_lines(std::string s) {
+* bool is_number(std::string s) {
+* std::string remove_space(std::string s) {
+* std::string remove_endlines(std::string s) {
+* std::string remove_occurence(std::string s, std::string word) {
+* std::string remove_occurence_recursive(std::string s, std::string word) {
+* std::string remove_special_chars(std::string s) {
+* std::string capitalize(std::string s) {
+* std::string reverse(std::string s) {
+* std::string center(std::string s, int width, std::string padding=" ") {
+* int count(std::string s, std::string word, int start=-1,int end=-1) {
+* std::string expand_tabs(std::string s, int tabsize=8) {
+* std::string swap_case(std::string s) {
+* std::string zfill(std::string s, int padding) {
+* std::vector<std::string> partition(std::string s, std::string separator) {
+* std::vector<std::string> rpartition(std::string s, std::string separator) {
+* std::string translate(std::string s, std::string from, std::string to) {
+* std::string tr(std::string s, std::string from, std::string to) {
+
+
+# Nice foos already implemented in the standard library of cpp11
+
+* 	float              std::stof(const string& str, size_t *idx = 0);
+* 	double             std::stod(const string& str, size_t *idx = 0);
+* 	long double        std::stold(const string& str, size_t *idx = 0);
+* 	int                std::stoi(const string& str, size_t *idx = 0, int base = 10);
+* 	long               std::stol(const string& str, size_t *idx = 0, int base = 10);
+* 	unsigned long      std::stoul(const string& str, size_t *idx = 0, int base = 10);
+* 	long long          std::stoll(const string& str, size_t *idx = 0, int base = 10);
+* 	unsigned long long std::stoull(const string& str, size_t *idx = 0, int base = 10);
+* 	string std::to_string(int val);
+* 	string std::to_string(unsigned val);
+* 	string std::to_string(long val);
+* 	string std::to_string(unsigned long val);
+* 	string std::to_string(long long val);
+* 	string std::to_string(unsigned long long val);
+* 	string std::to_string(float val);
+* 	string std::to_string(double val);
+* 	string std::to_string(long double val);
+
+
+* 	isalnum - Check if character is alphanumeric (function )
+* 	isalpha - Check if character is alphabetic (function )
+* 	isblank - Check if character is blank (function )
+* 	iscntrl - Check if character is a control character (function )
+* 	isdigit - Check if character is decimal digit (function )
+* 	isgraph - Check if character has graphical representation (function )
+* 	islower - Check if character is lowercase letter (function )
+* 	isprint - Check if character is printable (function )
+* 	ispunct - Check if character is a punctuation character (function )
+* 	isspace - Check if character is a white-space (function )
+* 	isupper - Check if character is uppercase letter (function )
+* 	isxdigit - Check if character is hexadecimal digit (function )
+* 	Character conversion functions:
+* 	tolower - Convert uppercase letter to lowercase (function )
+* 	toupper - Convert lowercase letter to uppercase (function )
+
+*	rfind - find characters in the string in reverse
+*	find  - find characters in the string
+*	find_first_of - find first occurrence of characters
+*	find_first_not_of - find first absence of characters
+*	find_last_of - find last occurrence of characters
+*	find_last_not_of - find last absence of characters
+
+*	regex_match
+*	regex_replace
