@@ -5,10 +5,12 @@ Easy String In CPP
 Inspired by a conversation on IRC with [Pr0Wolf29](https://github.com/Pr0Wolf29/)
 
 
-Possibility to choose between a class extending string or to use simple
-functions that take strings and return strings (or as reference) in a namespace (obviously)
+Provides functions that take strings and return strings (or as reference) in a namespace (obviously)
 
 Set for camelcase
+
+
+This repo will not sublass the std::string see [this](https://stackoverflow.com/questions/6006860/why-should-one-not-derive-from-c-std-string-class).
 
 
 #Functions Implemented:
